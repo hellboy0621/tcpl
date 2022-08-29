@@ -1,42 +1,42 @@
 #include <stdio.h>
+
 #define MAXLINE 1000
 
 int getline(char line[], int maxline);
-int remove1(char s[]);
+
+void reverse(char s[]);
 
 int main() {
     char line[MAXLINE];
 
     while (getline(line, MAXLINE) > 0) {
-        if (remove1(line) > 0) {
-            printf("%s", line);
-        }
+        reverse(line);
+        printf("%s", line);
     }
 
     return 0;
 }
 
-int remove1(char s[]) {
-    int i;
+void reverse(char s[]) {
+    int i, j;
+    char temp;
 
     i = 0;
-    while (s[i] != '\n') {
+    while (s[i] != '\0') {
         ++i;
     }
     --i;
-    while (i >= 0 && (s[i] == ' ' || s[i] == '\t')) {
+    if (s[i] == '\n') {
         --i;
     }
-    // is it a non-blank line?
-    if (i >= 0) {
-        ++i;
-        // put new line character back
-        s[i] = '\n';
-        ++i;
-        // terminate the string
-        s[i] = '\0';
+    j = 0;
+    while (j < i) {
+        temp = s[j];
+        s[j] = s[i];
+        s[i] = temp;
+        --i;
+        ++j;
     }
-    return i;
 }
 
 int getline(char s[], int lim) {
