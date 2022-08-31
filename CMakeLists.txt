@@ -12,3 +12,5 @@ add_executable(tcpl_ch01_20 ch01/1-20.c)
 add_executable(tcpl_ch01_21 ch01/1-21.c)
 add_executable(tcpl_ch01_22 ch01/1-22.c)
 add_executable(tcpl_ch01_23 ch01/1-23.c)
+
+add_executable(tcpl_ch02_1 ch02/2-1.c)
