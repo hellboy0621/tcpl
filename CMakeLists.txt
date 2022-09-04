@@ -15,3 +15,4 @@ add_executable(tcpl_ch01_23 ch01/1-23.c)
 
 add_executable(tcpl_ch02_1 ch02/2-1.c)
 add_executable(tcpl_ch02_p30 ch02/p30.c)
+add_executable(tcpl_ch02_3 ch02/2-3.c)
