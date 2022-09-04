@@ -31,3 +31,22 @@ int main() {
         }
     }
 }
+
+// 将字符串 s 转换为响应的整型数
+int atoi(char s[]) {
+    int i, n;
+
+    n = 0;
+    for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i) {
+        n = 10 * n + (s[i] - '0');
+    }
+    return n;
+}
+
+// 把字符 c 转换为小写形式；只对 ASCII 字符集有效
+int lower(int c) {
+    if (c >= 'A' && c <= 'Z') {
+        return c + 'a' - 'A';
+    }
+    return c;
+}
