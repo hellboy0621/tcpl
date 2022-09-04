@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 // rotate x to the right by n positions
 unsigned rightrot(unsigned x, int n) {
@@ -25,6 +26,20 @@ int worldlength(void) {
     return i;
 }
 
+unsigned rightrot2(unsigned x, int n) {
+    int worldlength(void);
+    unsigned rbits;
+
+    if ((n = n % worldlength()) > 0) {
+        rbits = ~(~0 << n) & x;
+        rbits = rbits << (worldlength() - n);
+        x = x >> n;
+        x = x | rbits;
+    }
+    return x;
+}
+
 int main() {
-    rightrot(7, 2);
+    printf("%d\n", rightrot(7, 2));
+    printf("%d\n", rightrot2(7, 2));
 }
