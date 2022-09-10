@@ -20,3 +20,5 @@ add_executable(tcpl_ch02_8 ch02/2-8.c)
 add_executable(tcpl_ch02_9 ch02/2-9.c)
 add_executable(tcpl_ch02_10 ch02/2-10.c)
 add_executable(tcpl_ch03_p48 ch03/p48.c)
+
+add_executable(tcpl_ch03_2 ch03/3-2.c)
