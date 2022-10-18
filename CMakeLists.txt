@@ -37,3 +37,4 @@ add_executable(tcpl_ch04_13 ch04/4-13.c)
 add_executable(tcpl_ch04_14 ch04/4-14.c)
 
 add_executable(tcpl_ch05_p85 ch05/p85.c)
+add_executable(tcpl_ch05_3 ch05/5-3.c)
